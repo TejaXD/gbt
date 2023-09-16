@@ -1,0 +1,10 @@
+import getpass
+database = {"ANJAS": "KECE"}
+username = input("Enter Your Username : ").lower()
+password = getpass.getpass("Enter Your Password : ").lower()
+for key in database.keys():
+    if username == key:
+        while password != database.get(key):
+            password = getpass.getpass("Re-enter Your Password : ")
+        break
+print("User Verified")
